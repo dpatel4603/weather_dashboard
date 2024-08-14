@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 style="text-align: center">Weather Dashboard</h1>
+    <form method="POST">
+        <label for="location">Enter an American Address:</label><br>
+        <input type="text" id="location" name="location" required><br><br>
+        <label for="days">How many days of weather forecast? (1-7):</label><br>
+        <input type="number" id="days" name="days" min="1" max="7" required><br><br>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

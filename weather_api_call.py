@@ -1,3 +1,4 @@
+# Initial Python Script solely used to be able to get the overall process of the dashboard
 import sys
 import requests
 from geopy.geocoders import Nominatim
